@@ -8,7 +8,7 @@ package iut.bad;
  *
  * @author Kiady
  */
-public class Humain {
+public class Humain implements Consommation{
     private String nom;
     private String prenom;
     private int age;
@@ -27,10 +27,12 @@ public class Humain {
         System.out.println(toString());
     }
     
+    @Override
     public void manger(){
         System.out.println("Je mange.");
     }
     
+    @Override
     public void boire(){
         System.out.println("Je bois");
     }
