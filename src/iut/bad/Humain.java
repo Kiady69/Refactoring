@@ -32,10 +32,14 @@ public class Humain implements Consommation{
         System.out.println(toString());
     }
     
-    public void ami(Humain ami){
+    public void ami(Humain ami, int dureeAmitie){
         amis.add(ami);
         ami.amis.add(this);
-        System.out.println(this.nom +" est maintenant ami avec "+ ami.nom +".");
+        System.out.println(this.nom +" est maintenant ami avec "+ ami.nom +" pour "+ dureeAmitie + " jours.");
+    }
+    
+    public void ami(Humain ami){
+        ami(ami, 100);
     }
     
     @Override
