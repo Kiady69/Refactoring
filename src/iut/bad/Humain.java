@@ -4,6 +4,9 @@
  */
 package iut.bad;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Kiady
@@ -12,19 +15,27 @@ public class Humain implements Consommation{
     private String nom;
     private String prenom;
     private int age;
+    private List<Humain> amis;
     
     public Humain(){
-        
+        amis = new ArrayList<>();
     }
     
     public Humain(String nom, String prenom, int age){
         this.nom = nom;
         this.prenom = prenom;
         this.age = age;
+        amis = new ArrayList<>();
     }
 
     public void details() {
         System.out.println(toString());
+    }
+    
+    public void ami(Humain ami){
+        amis.add(ami);
+        ami.amis.add(this);
+        System.out.println(this.nom +" est maintenant ami avec "+ ami.nom +".");
     }
     
     @Override
@@ -65,6 +76,12 @@ public class Humain implements Consommation{
     public void setAge(int age) {
         this.age = age;
     }
-    
-    
+
+    public List<Humain> getAmis() {
+        return amis;
+    }
+
+    public void setAmis(List<Humain> amis) {
+        this.amis = amis;
+    }
 }
