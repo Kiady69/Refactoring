@@ -23,6 +23,18 @@ public class Humain {
         this.age = age;
     }
 
+    public void details() {
+        System.out.println(toString());
+    }
+    
+    public void manger(){
+        System.out.println("Je mange.");
+    }
+    
+    public void boire(){
+        System.out.println("Je bois");
+    }
+    
     @Override
     public String toString() {
         return "Humain{" + "nom=" + nom + ", prenom=" + prenom + ", age=" + age + '}';
