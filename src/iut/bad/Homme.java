@@ -9,5 +9,8 @@ package iut.bad;
  * @author Kiady
  */
 public class Homme extends Humain{
+
+    public Homme(String smith, String john, int par) {
+    }
        
 }
