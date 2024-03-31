@@ -22,9 +22,10 @@ public class Humain {
         this.prenom = prenom;
         this.age = age;
     }
-    
-    public void details() {
-        System.out.println("Nom: "+ nom +", Prenom: "+ prenom +", Age: "+ age);
+
+    @Override
+    public String toString() {
+        return "Humain{" + "nom=" + nom + ", prenom=" + prenom + ", age=" + age + '}';
     }
 
     public String getNom() {
